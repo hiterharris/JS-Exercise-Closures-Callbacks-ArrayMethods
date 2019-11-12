@@ -1,5 +1,5 @@
 // ⭐️ Example Challenge START ⭐️
-
+const stringList = ['foo', 'bar'];
 /**
  * ### Challenge `processFirstItem`
  * 
@@ -15,8 +15,12 @@
  * should return 'foofoo'.
 */
 function processFirstItem(stringList, callback) {
-  return callback(stringList[0])
+  return callback(stringList[0]);
 }
+const add = (stringList) => {
+  return stringList + stringList;
+}
+console.log(processFirstItem(stringList, add));
 
 // ⭐️ Example Challenge END ⭐️
 
@@ -48,9 +52,13 @@ function processFirstItem(stringList, callback) {
  * [2] Invoking `processLength` passing `[]` and `(num) => "There are " + num`,
  * should return "There are 0".
 */
-function processLength(/* CODE HERE */) {
-  /* CODE HERE */
+function processLength(list, callback) {
+    return callback(list.length);
 }
+const add2 = (num) => {
+  return num + 1000;
+}
+console.log(processLength(stringList, add2));
 
 /**
  * ### Challenge `processLastItem`
@@ -66,9 +74,14 @@ function processLength(/* CODE HERE */) {
  * Invoking `processLastItem` passing `['foo', 'bar']` and `(str) => str + str`,
  * should return 'barbar'.
 */
-function processLastItem(/* CODE HERE */) {
+function processLastItem(stringList, callback) {
   /* CODE HERE */
+  return callback(stringList[1]);
 }
+const last = (stringList) => {
+  return stringList + stringList;
+}
+console.log(processLastItem(stringList, last))
 
 /**
  * ### Challenge `processSum`
@@ -87,8 +100,12 @@ function processLastItem(/* CODE HERE */) {
  * [2] Invoking `processSum` passing `[]` and `(num) => num + 1000`,
  * should return 1000.
 */
-function processSum(/* CODE HERE */) {
+function processSum(numberList, callback) {
   /* CODE HERE */
+  const num =  numberList.reduce( (a,b) => {
+    return (a + b)
+  }, 0);
+  return callback(num);
 }
 
 /**
@@ -109,8 +126,12 @@ function processSum(/* CODE HERE */) {
  * [2] Invoking `processProduct` passing 25 and 0 and `(num) => num + 1000`,
  * should return 1000.
 */
-function processProduct(/* CODE HERE */) {
+function processProduct(num1, num2, callback) {
   /* CODE HERE */
+  return callback(product(num1,num2));
+}
+const product = (num1, num2) => {
+  return num1 * num2;
 }
 
 /**
