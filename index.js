@@ -215,12 +215,13 @@ const unique = (list) => {
 
 function getFullNames(runners) {
   /* CODE HERE */
-  console.log(runners);
-  let runner = [];
-  runners.forEach( runner => {
-    return runner.push(`${runner.last_name}, ${runner.first_name}`);
+  // console.log(runners);
+  // let runner = [];
+  runners.forEach( (runner) => {
+    // return runner.push(`${runner.last_name}, ${runner.first_name}`);
+    return `${runner.last_name}, ${runner.first_name}`;
   });
-  return runner;
+  // return runners;
 }
 
 
@@ -246,8 +247,9 @@ function firstNamesAllCaps(runners, callback) {
 
 const runner = (runners) => {
   runners.map(runner => {
-    runner.first_name.toUpperCase();
+    return runner.first_name.toUpperCase();
   });
+  return runner;
 }
 
 /**
