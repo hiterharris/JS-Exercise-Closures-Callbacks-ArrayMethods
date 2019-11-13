@@ -10,7 +10,7 @@ if (typeof exports !== "undefined") {
   // Node/Non-browser test env
 
   var chai = require("chai");
-  var runners = require('../data/runners');
+  // var runners = require('../data/runners');
 
   var {
     processFirstItem,
